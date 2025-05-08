@@ -1,0 +1,16 @@
+// .devcontainer/devcontainer.json
+{
+    "name": "FINAL_YEAR Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/full",
+    "forwardPorts": [3000, 8000],
+    "postCreateCommand": "cd Backend && pip install --upgrade pip && pip install -r requirements.txt && cd ../Frontend && npm install",
+    "overrideCommand": false,
+    "portsAttributes": {
+      "3000": { "onAutoForward": "openPreview" },
+      "8000": { "onAutoForward": "openPreview" }
+    },
+    "runArgs": [
+      "--init"
+    ]
+  }
+  
